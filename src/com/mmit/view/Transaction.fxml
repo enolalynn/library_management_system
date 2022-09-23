@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tbp_transaction" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mmit.controller.TransactionController">
+  <tabs>
+    <Tab fx:id="tab_borrow" text="Borrow">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="671.0" prefWidth="865.0">
+               <children>
+                  <Pane layoutX="258.0" layoutY="354.0" prefHeight="267.0" prefWidth="349.0">
+                     <children>
+                        <Label layoutX="43.0" layoutY="35.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="33.0" text="Book Code">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="137.0" text="Borrow Date">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="147.0" layoutY="178.0" mnemonicParsing="false" onAction="#btn_borrow_click" style="-fx-background-color: #117007;" text="Borrow" textFill="#f8f7f7">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txt_code" layoutX="141.0" layoutY="28.0" prefHeight="25.0" prefWidth="171.0" promptText="Book Code" />
+                        <TextField fx:id="txt_memberId" layoutX="140.0" layoutY="64.0" prefHeight="25.0" prefWidth="173.0" promptText="Enter Member Card ID" />
+                        <DatePicker fx:id="txt_borrowDate" layoutX="140.0" layoutY="134.0" promptText="Choose date" />
+                        <Label layoutX="44.0" layoutY="103.0" text="Fees">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_fees" layoutX="140.0" layoutY="99.0" prefHeight="25.0" prefWidth="173.0" promptText="Enter rent fees" />
+                        <Label layoutX="45.0" layoutY="66.0" text="Member ID">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ScrollPane layoutX="68.0" layoutY="64.0" prefHeight="289.0" prefWidth="749.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="288.0" prefWidth="740.0">
+                           <children>
+                              <TableView fx:id="tbl_bookList" prefHeight="287.0" prefWidth="748.0">
+                                <columns>
+                                  <TableColumn fx:id="col_code" prefWidth="88.0" text="Code" />
+                                  <TableColumn fx:id="col_title" prefWidth="196.0" text="Title" />
+                                    <TableColumn fx:id="col_publishDate" prefWidth="119.0" text="Publish Date" />
+                                    <TableColumn fx:id="col_category" prefWidth="102.0" text="Category" />
+                                    <TableColumn fx:id="col_author" prefWidth="139.0" text="Author" />
+                                    <TableColumn fx:id="col_available" prefWidth="96.0" text="Available" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Button layoutX="783.0" layoutY="613.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: #2c5780;" text="Home" textFill="#f8f7f7">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="75.0" layoutY="33.0" text="Book List">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="75.0" layoutY="55.0" prefHeight="4.0" prefWidth="56.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tab_return" text="Return">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="286.0" layoutY="97.0" prefHeight="389.0" prefWidth="378.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="42.0" text="Book Code">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="77.0" text="Member ID">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="113.0" text="Borrow Date">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="147.0" text="Due Date">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="181.0" text="Return Date">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="218.0" text="Fine (if any)">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="255.0" text="Fees">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_code_return" layoutX="131.0" layoutY="40.0" onKeyTyped="#txt_bookCode_pressed" prefHeight="25.0" prefWidth="176.0" promptText="Enter Book Code" />
+                        <TextField fx:id="txt_memberId_return" layoutX="131.0" layoutY="75.0" prefHeight="25.0" prefWidth="176.0" promptText="Member ID" />
+                        <DatePicker fx:id="txt_borrowDate_return" layoutX="132.0" layoutY="110.0" promptText="Borrow Date" />
+                        <DatePicker fx:id="txt_dueDate_return" layoutX="132.0" layoutY="145.0" promptText="Due Date" />
+                        <DatePicker fx:id="txt_returnDate_return" layoutX="132.0" layoutY="180.0" onAction="#txt_returnDate_onAction" promptText="Return Date" />
+                        <TextField fx:id="txt_fine_return" layoutX="133.0" layoutY="215.0" onKeyTyped="#txt_fine_typed" prefHeight="25.0" prefWidth="173.0" promptText="Fine" text="0.0" />
+                        <TextField fx:id="txt_fees_return" layoutX="132.0" layoutY="251.0" prefHeight="25.0" prefWidth="176.0" promptText="Fees" />
+                        <Button layoutX="135.0" layoutY="327.0" mnemonicParsing="false" onAction="#btn_return_click" style="-fx-background-color: #117007;" text="Return" textFill="#f8f7f7">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="29.0" layoutY="290.0" text="Total amount">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_totalFee_return" layoutX="132.0" layoutY="286.0" prefHeight="25.0" prefWidth="176.0" promptText="Total  Fees" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="740.0" layoutY="607.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: #2c5780;" text="Home" textFill="#f8f7f7">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tab_transactionInfo" text="Transaction Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane layoutX="8.0" layoutY="61.0" prefHeight="508.0" prefWidth="881.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="879.0">
+                           <children>
+                              <TableView fx:id="tbl_transaction_info" prefHeight="507.0" prefWidth="865.0">
+                                <columns>
+                                  <TableColumn fx:id="col_srNo_info" prefWidth="63.0" text="Sr.no" />
+                                  <TableColumn fx:id="col_code_info" prefWidth="83.0" text="Code" />
+                                    <TableColumn fx:id="col_member_info" prefWidth="135.0" text="Member" />
+                                    <TableColumn fx:id="col_borrowDate_info" prefWidth="135.0" text="Borrow Date" />
+                                    <TableColumn fx:id="col_dueDate_info" prefWidth="108.0" text="Due Date" />
+                                    <TableColumn fx:id="col_returnDate_info" prefWidth="121.0" text="Return Date" />
+                                    <TableColumn fx:id="col_fine_info" prefWidth="112.0" text="Fine" />
+                                    <TableColumn fx:id="col_fee_info" prefWidth="106.0" text="Fees" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Button layoutX="829.0" layoutY="604.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: #2c5780;" text="Home" textFill="#f8f7f7">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

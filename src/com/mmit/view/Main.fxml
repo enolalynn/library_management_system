@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mmit.controller.LoginController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="500.0" prefWidth="281.0" style="-fx-background-color: #006080;">
+         <children>
+            <Label layoutX="22.0" layoutY="70.0" text="Library" textFill="#e6f9ff">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="132.0" text="Management" textFill="#e6f9ff">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="179.0" layoutY="193.0" text="System" textFill="#e6f9ff">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="439.0" text="Developed by Enola Lynn" textFill="#e6f9ff">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="528.0" layoutY="14.0" onMouseClicked="#lbl_close_click" text="X" textFill="#006080">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="106.0" fitWidth="130.0" layoutX="371.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="326.0" layoutY="226.0" text="Email" textFill="#006080">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="327.0" layoutY="290.0" text="Password" textFill="#006080">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_email" layoutX="320.0" layoutY="252.0" prefHeight="25.0" prefWidth="195.0" promptText="Enter Email" />
+      <PasswordField fx:id="txt_pass" layoutX="320.0" layoutY="316.0" prefHeight="25.0" prefWidth="195.0" promptText="Enter Password" />
+      <Button layoutX="341.0" layoutY="359.0" mnemonicParsing="false" onAction="#btn_login_click" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #006080;" text="Login" textFill="#e6f9ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="427.0" layoutY="359.0" mnemonicParsing="false" onAction="#btn_clear_click" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #009933;" text="Clear" textFill="#e6f9ff">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="377.0" layoutY="192.0" text="Welcome" textFill="#006080">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

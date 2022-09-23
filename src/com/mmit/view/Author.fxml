@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="602.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mmit.controller.AuthorController">
+   <children>
+      <ScrollPane layoutX="37.0" layoutY="73.0" prefHeight="312.0" prefWidth="782.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="774.0">
+               <children>
+                  <TableView fx:id="tbl_author" layoutX="6.0" layoutY="5.0" prefHeight="296.0" prefWidth="760.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="109.0" text="ID" />
+                      <TableColumn fx:id="coll_name" prefWidth="346.0" text="Name" />
+                        <TableColumn fx:id="col_city" minWidth="0.0" prefWidth="169.0" text="City" />
+                        <TableColumn fx:id="col_birthday" prefWidth="146.0" text="Birthday" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="39.0" layoutY="28.0" prefHeight="34.0" prefWidth="103.0" text="Author List" textFill="#08739a">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="405.0" text="Name" textFill="#08739a">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name" layoutX="332.0" layoutY="401.0" prefHeight="25.0" prefWidth="211.0" promptText="Enter Name" />
+      <Label layoutX="256.0" layoutY="446.0" text="City" textFill="#08739a">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_city" layoutX="332.0" layoutY="442.0" prefHeight="25.0" prefWidth="211.0" promptText="Enter City" />
+      <Label layoutX="256.0" layoutY="486.0" text="Birthday" textFill="#08739a">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txt_birthday" layoutX="331.0" layoutY="482.0" prefHeight="25.0" prefWidth="211.0" promptText="Choose Birthday" />
+      <Button layoutX="332.0" layoutY="525.0" mnemonicParsing="false" onAction="#btn_add_click" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #006622;" text="Add" textFill="#fcf7f7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="407.0" layoutY="525.0" mnemonicParsing="false" onAction="#btn_update_click" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #8000ff;" text="Update" textFill="#fcf7f7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="482.0" layoutY="525.0" mnemonicParsing="false" onAction="#btn_delete_click" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #e60000;" text="Delete" textFill="#fcf7f7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="758.0" layoutY="559.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #52527a;" text="Back" textFill="#fcf7f7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
