@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mmit.controller.MemberController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="711.0">
+         <children>
+            <Pane layoutX="-14.0" prefHeight="600.0" prefWidth="725.0" style="-fx-background-color: #6C85BD;">
+               <children>
+                  <Label layoutX="307.0" layoutY="16.0" prefHeight="30.0" prefWidth="97.0" text="Members" textFill="#fffdfd">
+                     <font>
+                        <Font name="Bell MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="31.0" layoutY="65.0" prefHeight="250.0" prefWidth="672.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="254.0" prefWidth="672.0">
+                           <children>
+                              <TableView fx:id="tbl_member" layoutX="3.0" layoutY="9.0" prefHeight="237.0" prefWidth="666.0">
+                                <columns>
+                                  <TableColumn fx:id="col_cardId" prefWidth="70.0" text="Card ID" />
+                                  <TableColumn fx:id="col_name" prefWidth="110.0" text="Name" />
+                                    <TableColumn fx:id="col_rollNo" prefWidth="75.0" text="Roll No." />
+                                    <TableColumn fx:id="col_year" prefWidth="75.0" text="Year" />
+                                    <TableColumn fx:id="col_academicYear" prefWidth="110.0" text="Academic Year" />
+                                    <TableColumn fx:id="col_createdDate" prefWidth="110.0" text="Created Date" />
+                                    <TableColumn fx:id="col_expiredDate" prefWidth="115.0" text="Expired Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Label layoutX="224.0" layoutY="342.0" text="Name" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="224.0" layoutY="375.0" text="Roll No." textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="224.0" layoutY="441.0" text="Academic Year" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="224.0" layoutY="473.0" text="Created Date" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="225.0" layoutY="407.0" text="Year" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_name" layoutX="335.0" layoutY="339.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Name" />
+                  <TextField fx:id="txt_rollNo" layoutX="335.0" layoutY="372.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Roll No." />
+                  <TextField fx:id="txt_academicYear" layoutX="335.0" layoutY="438.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Year " />
+                  <DatePicker fx:id="txt_createdDate" layoutX="337.0" layoutY="471.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Date" />
+                  <Button layoutX="337.0" layoutY="514.0" mnemonicParsing="false" onAction="#btn_register_cllck" style="-fx-background-color: #486e44;" text="Register" textFill="#f7f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="412.0" layoutY="514.0" mnemonicParsing="false" onAction="#btn_update_click" style="-fx-background-color: #1ccee8;" text="Update" textFill="#4c586f">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="482.0" layoutY="513.0" mnemonicParsing="false" onAction="#btn_home_click" style="-fx-background-color: #674b86;" text="Home" textFill="#fefeff">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_year" layoutX="336.0" layoutY="405.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter Year (eg. First year)" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
